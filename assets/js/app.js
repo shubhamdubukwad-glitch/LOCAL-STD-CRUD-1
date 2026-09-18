@@ -47,9 +47,8 @@ const stdcontainer = document.getElementById('stdcontainer')
 // ];
 // localStorage.setItem('stdArr',JSON.stringify(stdArr));
 let sdtjson = localStorage.getItem('stdArr');
-cl(sdtjson)
 
-let stdArr = JSON.parse(localStorage.getItem('stdArr'))
+let stdArr = JSON.parse(localStorage.getItem('stdArr'))||[];
 cl(stdArr)
 //readstd//
 function readstd(arr) {
