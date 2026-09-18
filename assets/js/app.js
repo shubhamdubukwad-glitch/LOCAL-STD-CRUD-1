@@ -15,7 +15,7 @@ const stdcontainer = document.getElementById('stdcontainer')
 //         fname: "shubham",
 //         lname: "dubukwad",
 //         email: "shubhamdubukwad32@gmail.com",
-//         contect: 8600660293,
+//         contect: "8600660293",
 //         address: "gudsoor",
 //         id: '2341'
 //     },
@@ -23,7 +23,7 @@ const stdcontainer = document.getElementById('stdcontainer')
 //         fname: "vitthel",
 //         lname: "dubukwad",
 //         email: "vitthelgmail.com",
-//         contect: 435260293,
+//         contect: "435260293",
 //         address: "pune",
 //         id: '234541'
 //     },
@@ -31,7 +31,7 @@ const stdcontainer = document.getElementById('stdcontainer')
 //         fname: "prashanr",
 //         lname: "dubukwad",
 //         email: "prashantgmail.com",
-//         contect: 46874293,
+//         contect: "46874293",
 //         address: "udgir",
 //         id: '47567'
 //     },
@@ -39,15 +39,17 @@ const stdcontainer = document.getElementById('stdcontainer')
 //         fname: "om",
 //         lname: "dubukwad",
 //         email: "omdubukwad32.com",
-//         contect: 84556875457,
+//         contect: "8455687545",
 //         address: "latur",
 //         id: '4366'
 //     },
 
 // ];
 // localStorage.setItem('stdArr',JSON.stringify(stdArr));
-let sdtjson = localStorage.getItem('stdArr');
-let stdArr = JSON.parse(localStorage.getItem('stdArr'))||[];
+// let sdtjson = localStorage.getItem('stdArr');
+
+let stdArr = JSON.parse(localStorage.getItem('stdArr')) || [];
+cl(stdArr)
 //readstd//
 function readstd(arr) {
     let result = ``;
@@ -87,7 +89,8 @@ function oncreatestd(ele) {
     localStorage.setItem('stdArr', JSON.stringify(stdArr))
 
     let tr = document.createElement('tr')
-    tr.innerHTML = `                      <td>${stdArr.length}</td>
+    tr.id = createobj.id;
+    tr.innerHTML = `                    <td>${stdArr.length}</td>
                                         <td>${createobj.fname}</td>
                                         <td>${createobj.lname}</td>
                                         <td>${createobj.email}</td>
